@@ -97,9 +97,9 @@ public class Controller implements Initializable {
     private List<String> getDataFromPage(String search) {
         outputArea.appendText("Wyszukuję przedmiotu: [" + search +"]\n . . . . \n");
         System.setProperty("webdriver.chrome.driver", "resources\\chromedriver.exe");
-//        if (System.getProperty("webdriver.chrome.driver").isEmpty() || System.getProperty("webdriver.chrome.driver") == null) {
+        if (System.getProperty("webdriver.chrome.driver").isEmpty() || System.getProperty("webdriver.chrome.driver") == null) {
             System.setProperty("webdriver.chrome.driver","C:\\rebelScrapper\\chromedriver.exe");
-//        }
+        }
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080", "--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
